@@ -11,6 +11,15 @@ def fib(value):
 		
 		return f(prev1, prev2 + prev1, step + 1, max)	
 	
-	return f(0, 0, 1, value)
+	def f2(max):
+		current, next = 0, 1
+		step = 1
+		while step < max:
+			current, next = next, next + current
+			step = step + 1
+		return current
+	
+	return f2(value)
+	#return f(0, 0, 1, value)
 
-print(fib(100))
+print([fib(x) for x in range(1, 10)])
