@@ -4,7 +4,7 @@ import json
 tests = [(1, 0), (2, 1), (3,1), (4,2), (5,3)]
 
 class FibonacciApiTest():
-	def __init__(self, base_url):
+	def __init__(self, base_url: str):
 		self.base_url = base_url
 	
 	def fib_get_test(self):    
