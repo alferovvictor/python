@@ -25,3 +25,13 @@ MIDDLEWARE = [
 
 ## Comments
 https://realpython.com/python-assert-statement/
+
+## TESTING
+Testing the API:
+https://realpython.com/testing-in-django-part-1-best-practices-and-examples/#testing-the-api
+
+coverage:
+```
+coverage run manage.py test whatever -v 2
+coverage html
+```
