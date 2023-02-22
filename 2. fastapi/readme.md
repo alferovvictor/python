@@ -10,4 +10,6 @@ pip install "uvicorn[standard]"
 3) run:
 uvicorn main:app --reload
 
+4) swagger:
+http://127.0.0.1:8000/docs
 ```
