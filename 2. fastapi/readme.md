@@ -2,6 +2,7 @@ https://fastapi.tiangolo.com/
 
 ```
 1) install:
+pip install requests
 pip install fastapi
 pip install "uvicorn[standard]"
 

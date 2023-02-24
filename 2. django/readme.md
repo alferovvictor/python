@@ -2,9 +2,13 @@
 
 url: https://www.w3schools.com/django/django_urls.php
 
-
-run:
 ```
+1) install:
+py -m pip install Django
+
+2) write your app ...
+
+3) run:
 python manage.py runserver
 ```
 
