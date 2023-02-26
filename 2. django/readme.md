@@ -9,6 +9,12 @@ pip install Django
 
 ## Run:
 ```
+1) install:
+py -m pip install Django
+
+2) write your app ...
+
+3) run:
 python manage.py runserver
 ```
 
