@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fib import get_fib_num
 from pydantic import BaseModel
 import uvicorn
+import threading
 
 # https://fastapi.tiangolo.com/tutorial/body/
 class Item(BaseModel):
@@ -22,18 +23,19 @@ webapp.add_middleware(
 """
 
 @app.get('/api/fib')
-def fib_get(order: int = 1) -> int:
+async def fib_get(order: int = 1) -> int:
+	threading.active_count()
 	return get_fib_num(order)
    
 @app.post('/api/fib')
-def fib_post(item: Item):
+async def fib_post(item: Item):
 	item.value = get_fib_num(item.order)
 	return item
 
-# https://stackoverflow.com/questions/67453019/uvicorn-fastapi-executable
+# https://fastapi.tiangolo.com/tutorial/debugging/
 def serve():
 	"""Serve the web application."""
-	uvicorn.run(app)
+	uvicorn.run(app=app, access_log=False)
 
 if __name__ == "__main__":
 	serve()
